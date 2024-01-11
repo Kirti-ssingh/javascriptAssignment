@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic-signal</title>
+
+<style>
+
+body{
+    background-image: url(imagedown/photo_2024-01-02_09-20-04.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.main{
+    border: 1px solid black;
+    width: 70px;
+    height: 180px;
+    margin-left: 570px;
+    margin-top: 265px;
+    border-radius: 35%; }
+
+
+.round{
+
+    margin: 9px;
+    padding:1px;
+    height:100px;
+    width:50px;
+    border-radius: 35%;
+    border-style: inset;
+    border: 1px solid black;
+}
+
+    .div1{
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin-left: 13px;
+        margin-top: 5px;
+        box-shadow: 1px 1px 5px  rgb(220, 65, 18) ;
+        background-color: black;
+    }
+    .div2{
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: black;
+        margin-left: 13px;
+        margin-top: 5px;
+        box-shadow: 1px 1px 5px #f4f81c
+        
+    
+
+    }
+    .div3{
+        border: 1px solid black;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: black;
+        margin-left: 13px;
+        margin-top: 5px;
+        box-shadow: 1px 1px 5px#7ae74b
+        
+
+    }
+    .buttonstr{
+    margin-left:10px; 
+    color: black;
+    background-color: rgb(51, 254, 51);
+    padding-bottom:3px;
+    width:50px; height:20px;
+    border-radius: 35%;
+    }
+
+.buttonstp{
+    margin-left:10px; 
+    color: black; 
+    background-color: rgba(245, 8, 8, 0.991);
+    margin-top: 5px; 
+    padding-bottom: 3px;
+    width:50px; height:20px;
+    border-radius: 35%;
+   
+}
+    
+</style>
+<script>
+let store;
+let inctrement = 1;
+
+   function startClick(){
+    
+
+    store=setInterval(()=>{
+    if(inctrement==1){
+    let cred= document.getElementById("red").style.backgroundColor="red";
+    document.getElementById("yellow").style.backgroundColor="black";
+    document.getElementById("green").style.backgroundColor="black";
+    inctrement++;
+
+    }else if(inctrement == 2){
+
+    
+    let cyellow= document.getElementById("yellow").style.backgroundColor= "yellow";
+    document.getElementById("red").style.backgroundColor="black";
+    document.getElementById("green").style.backgroundColor="black";
+    inctrement++;
+
+    }else if(inctrement == 3){
+    
+    let cgreen= document.getElementById("green").style.backgroundColor= "green";
+
+    document.getElementById("red").style.backgroundColor="black";
+    document.getElementById("yellow").style.backgroundColor="black";
+    inctrement=1;
+
+   }  
+
+
+},1000)
+
+   }
+
+
+   function stopClick(){
+    
+    
+    clearTimeout(store);
+   }
+
+</script>
+</head>
+
+<body>
+  <div class="main" >
+  <div class="round">
+  <div class="div1" id="red">
+    
+
+   </div>
+   <div class="div2" id="yellow">
+
+   </div>
+   <div class="div3" id="green">
+   </div>
+
+   </div>
+
+    <input type="button" value="Start" class="buttonstr" onclick="startClick()">
+    <input type="button" value="Stop" class="buttonstp" onclick="stopClick()">
+    </div>
+
+</body>
+</html>

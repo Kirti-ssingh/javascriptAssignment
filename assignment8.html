@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    /*## 1. Write a JavaScript function to check if a given string is a palindrome 
+(reads the same forwards and backwards) 
+  
+     
+      
+    
+
+
+## 2.Write a JavaScript program to reverse a given string. 
+
+// program to reverse a string
+
+function reverseString(str) {
+
+    // empty string
+    let newString = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+
+// take input from the user
+const string = prompt('Enter a string:');
+
+const result = reverseString(string);
+console.log(result);*/
+
+
+
+/*## 3.Write a JavaScript function that takes an array of numbers 
+and returns a new array with only the even numbers.
+
+let arr = [1, 4, 6, 9, 11, 24]
+let narr = [];
+
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2==0){
+
+            narr.push(arr[i]);
+            
+        }
+    }
+    console.log(narr);*/ 
+
+/*## 4. Write a javascript program to find the vowel and consonant in a given sentences.
+eg: "Just one small positive thought in the morning can change your whole day".*/
+
+   let text =  "Just one small positive thought in the morning can change your whole day";
+   let str = text.split("");
+   let vowel = 0;
+   let conso = 0;
+   let space = 0;
+   
+   console.log(str);
+   for(let i=0; i<str.length; i++){
+    if(str[i]== "a"){
+    
+        vowel++;
+    }else if(str[i] =="e"){
+        vowel++;
+    }else if(str[i]=="i"){
+        vowel++;
+    }else if(str[i]=="o"){
+        vowel++;
+    }else if(str[i]=="u"){
+        vowel++;
+    }else if(str[i]==" "){
+        space++;
+    }else{
+        conso++;
+    console.log(str[i]);
+    }
+   }
+   console.log(vowel);
+   console.log(space);
+   console.log(conso);
+
+
+
+
+
+</script>
+</body>
+</html>

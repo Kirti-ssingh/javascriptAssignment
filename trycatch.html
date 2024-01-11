@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function calls(){
+        debugger;
+        try{
+         let name = document.getElementById("demo").value;
+         if(name*1!==Number(name)) 
+          {
+           throw new Error("you enterd number instead of string")
+          }
+
+         }catch(error){
+            alert(error)
+         }finally{
+            alert("all clear");
+         }
+
+        }
+
+    
+</script>
+<body>
+
+    <input type="text" id="demo"><br>
+    <button onclick="calls()">click</button>
+    
+</body>
+</html>

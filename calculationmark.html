@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .space{
+        margin: 3px;
+        padding: 5px;
+
+      }
+      div {
+        background-color: powderblue;
+      }
+      button {
+        color: blue;
+      }
+
+      .div2 {
+        margin-top: 50px;
+      }
+
+    </style>
+</head>
+<script>
+   function myFuncS(){
+        
+        let name = document.getElementById("one").value;
+        alert(name);
+      }
+      myFuncS();
+  
+</script>
+<body><main>
+  <center>
+<fieldset>
+  <div>
+  <input type="text" id="maths" class="space" placeholder="maths marks"><br>
+  
+  <input type="text" id="science" class="space"placeholder="science marks"><br>
+ 
+  <input type="text" id="computer" class="space" placeholder="computer marks"><br>
+  
+  <input type="text" id="history" class="space" placeholder="history marks"><br>
+  
+  <button onclick="myfun()"> calculate </button><br>
+  
+  <input type="text" placeholder="total marks" id="total" class="space"><input type="text" placeholder="total %" id="percentage" class="space">
+  
+  </div>
+
+</fieldset>
+
+
+</center>
+<fieldset>
+<div style="background-color: hotpink;">
+  <input type="text" placeholder="positive number or negative number" id="demo">
+  <button onclick="calls()" style="color: brown;"> click </button>
+</div>
+</fieldset>
+
+
+<center>
+  <fieldset>
+<span class="div2">
+  <input type="text" id="one">
+    <button onclick="myFuncS()">search</button>
+</span>
+</fieldset>
+</center>
+</main>
+<script>
+     /* Create an attractive marks calualation App, having following fileds.
+1.Math -input filed with proper place holder
+2.Science -input filed with proper place holder 
+3.Compuer -input filed with proper place holder
+4.History -input filed with proper place holder
+then, create a button to calculate the total marks and the total percentage which
+will shown inside the input box.*/
+function myfun(){
+    let markMath = document.getElementById("maths").value;
+    let mmath = Number(markMath);
+
+
+    let markScience = document.getElementById("science").value;
+    let mscience = Number(markScience);
+
+    
+    let markHistory = document.getElementById("history").value;
+    let mhistory = Number(markHistory);
+    let markComputer = document.getElementById("computer").value;
+    let mcomputer = Number(markComputer);
+    let sum = mmath +  mscience +  mhistory  +  mcomputer;
+    document.getElementById("total").value = sum;
+    let percn = (sum/400)*100;
+    document.getElementById("percentage").value = percn;
+    
+}
+
+myfun();
+
+
+
+
+function calls(){
+   let num = document.getElementById("demo").value;
+  
+   (num>=0) ?  alert("Positive"): alert("negative"); 
+}
+
+calls();
+
+
+
+
+
+
+</script>    
+</body>
+</html>
